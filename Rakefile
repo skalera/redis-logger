@@ -4,7 +4,7 @@ require 'rubocop/rake_task'
 
 task default: [:spec, :rubocop]
 
-task spec: :'spec:unit'
+task spec: [:'spec:unit', :'spec:integration']
 
 namespace :spec do
   desc 'run unit tests'
