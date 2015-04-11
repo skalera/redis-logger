@@ -1,5 +1,8 @@
 language: ruby
 rvm:
-  - 2.2.1
+- 2.2.1
 services:
-  - redis-server
+- redis-server
+notifications:
+  slack:
+    secure: c01SxnvhyVqHlfI2NDcGO2QO2hoPogiP5GBK1JCu6KdX1JMjjal071O4b6BFGZhJmi0FTUwxKPY+80+OzXqC88QJbzJDxvmnV3DyRTq9s14oC91Sq0Cb+l7TddcWHI5J7wdCggnQ8t7ola4fM3iolzJCL4hEKhOPj8Gzj+tlb8M=
