@@ -7,9 +7,7 @@ class Redis
     def initialize(log, options = {})
       @log = log
       @pubsub = options.delete(:pubsub)
-      redis_options = {}
-      redis_options[:url] = options[:url] if options.key?(:url)
-      @redis = Redis.new(redis_options)
+      @redis = Redis.new( options)
     end
 
     def write(message)
