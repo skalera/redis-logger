@@ -3,11 +3,11 @@ require 'redis'
 
 class Redis
   # Log device to log to a redis instance
-  class Logger < ::Logger::LogDevice
+  class Logger
     def initialize(log, options = {})
       @log = log
       @pubsub = options.delete(:pubsub)
-      @redis = Redis.new( options)
+      @redis = Redis.new(options)
     end
 
     def write(message)
